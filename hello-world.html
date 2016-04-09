@@ -13,7 +13,32 @@
 		body {
 			margin: 0px;
 		}
-		
+		.container-fluid {
+			padding: 0;
+		}
+		#header {
+			background: url(NIAGRA-FALLS.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 400px;
+			text-align: center;
+			display: table;
+
+		}
+		#header div {
+			display: table-cell;
+			vertical-align: bottom;
+		}
+		#header div img {
+			width: 250px;
+			height: 250px;
+			border-radius: 50%;
+			vertical-align: middle;
+		}
+		h1 {
+			color: white;
+		}
 		i {
 			color: #73AD21;
 			border: 2px solid #73AD21;
@@ -59,19 +84,49 @@
 			font-family: Georgia;
 			/*display: inline-block;*/
 		}
+		.box {
+			position: relative;
+		}
+		.overlapped {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			opacity: 1;
+		}
+		div.overlapped i {
+			/*div.box and div[class~='box']*/
+			background-color: #FBFFB9;
+			color: #EC7357;
+			border: 2px solid #FBFFB9;
+			opacity: 0;
+		}
+		div.overlapped i:hover{
+			opacity: 0.8;
+			/*transition: 2s;*/
+		}
 	</style>
 </head>
 
 <body>
 	<div class='container-fluid'>
-		<h1>This is a personal portforlio</h1>
+		<!--header section-->
+		<section id='header'>		
+		<div>
+			<img src="Zizhang.jpg"></img>
+			<h1><strong>Zizhang's Portfolio</strong></h1>
+		</div>
+		</section>
+		<!--navbar section-->
+		<section id='navbar'>
+			
+		</section>
 		<div class='myRow'>
 			<div class='myCol'>
-				<div id='o1' style='position:relative'>
+				<div class='box'>
 					<div>
 						<i class='fa fa-camera-retro fa-2x'></i>
 					</div>
-					<div id='r1' style='position:absolute;top:0;width:100%'>
+					<div class='overlapped'>
 						<i class='fa fa-anchor fa-2x'></i>
 					</div>
 				</div>
